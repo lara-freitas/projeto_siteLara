@@ -1,0 +1,97 @@
+/* Reset básico e box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    /* width e height auto são padrão e geralmente não são necessários aqui */
+}
+
+/* Estilos da Barra de Navegação */
+nav {
+    background-color: burlywood;
+    width: 100%;
+    padding: 10px 0; /* Adiciona um pouco de espaçamento vertical */
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Alinha os <li> em linha */
+    justify-content: center; /* Centraliza os itens da lista no contêiner ul */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: black;
+    padding: 5px 10px; /* Aumenta a área de clique e melhora a aparência */
+    display: block; /* Faz o link ocupar o espaço do li para melhor clique */
+    transition: background-color 0.3s ease; /* Efeito suave para hover */
+}
+
+nav ul li a:hover,
+nav ul li a:focus { /* Adiciona feedback visual para hover e foco (acessibilidade) */
+    background-color: rgba(0, 0, 0, 0.1); /* Um leve escurecimento ao passar o mouse */
+    border-radius: 4px;
+}
+
+/* Conteúdo Principal */
+.Primeiro_texto {
+    background-color: bisque;
+    text-align: center; 
+    padding: 20px; 
+}
+
+.Primeiro_texto img {
+    max-width: 80%; /* Torna a imagem responsiva, não ultrapassando o container */
+    height: auto;    /* Mantém a proporção da imagem */
+    display: block;  /* Permite usar margin auto para centralizar */
+    margin: 30px auto; /* Margem superior/inferior de 30px, centralizada horizontalmente */
+    border-radius: 8px; /* Opcional: para cantos arredondados na imagem */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Opcional: uma sombra sutil */
+}
+
+.Primeiro_texto p {
+    width: 90%; /* Ajustei um pouco, 50% pode ser muito estreito em telas largas. Teste! */
+    max-width: 1000px; /* Define uma largura máxima para melhor legibilidade */
+    text-align: justify;
+    margin: 15px auto; /* Espaçamento vertical e centralização horizontal */
+    line-height: 1.8; /* Espaçamento entre linhas para parágrafos */
+}
+
+h1 {
+    color: brown;
+    /* text-align: center; -- Já herdado de .Primeiro_texto se essa for a intenção */
+    margin-top: 30px;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do H1 */
+    font-size: 2.5em; /* Tamanho de fonte um pouco maior para o título principal */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px; /* Espaçamento interno para o rodapé */
+    background-color: blanchedalmond;
+    width: 100%;
+    /* Se quiser o footer fixo no final da PÁGINA (não da janela):
+       Pode não precisar de posicionamento especial, apenas garantir que ele venha após todo o conteúdo.
+    */
+}
+
+/* Se quiser o footer fixo no final da JANELA DE VISUALIZAÇÃO: */
+
+footer.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+}
